@@ -1,0 +1,99 @@
+#top{
+    height: 700px;
+    padding: 15px;
+    box-shadow: 6px 6px 9px gray;
+    margin-bottom: 30px;
+}
+#top > div > h1{
+    font-size: 8em;
+    color: white;
+    font-family: 'Satisfy', cursive;
+    padding-top: 200px;
+    text-shadow: 3px 3px 4px black;
+}
+#time{
+    margin-top: 50px;
+    padding-left: 130px;
+    padding-bottom: 5px;
+}
+#time > h1{
+    color: orangered;
+    text-shadow: 1px 1px 2px gray;
+    font-size: 3em;
+}
+#time > h2{
+    margin-top: -5px;
+    color: dimgray;
+    text-shadow: 1px 1px 2px gray;
+}
+hr {
+    border-width: 2px;
+    border-style: inset;
+    width: 90%;
+    margin: auto;
+}
+.year{
+    box-shadow: 3px 3px px gray;
+    width: 10%;
+    padding: 0 10px 10px 15px;
+    background-color: black;
+    color: white;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    float: left;
+    margin-left: -20px;
+
+}
+.month{
+    box-shadow: 3px 3px px gray;
+    width: 10%;
+    padding: 0 10px 10px 15px;
+    background-color: darkred;
+    color: white;
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    float: left;
+    margin-left: -30px;
+}
+.content{
+    width: 45%;
+    float: left;
+    background-color: black;
+    box-shadow: 6px 6px 9px gray;
+    margin: 10px;
+}
+.content > a > img{
+    width: 100%;
+}
+.content > div > h2{color: white}
+.content > div > h4{color: white}
+.b-wrapper > h2{font-size: 1em}
+#readmore > .container > div > h1{
+    font-size: 8em;
+    color: white;
+    font-family: 'Lobster', cursive;
+
+    padding: 80px 0 50px 0;
+    text-shadow: 3px 3px 4px black;
+}
+.thumbnails{
+    width: 30%;
+    margin: 17px;
+    float: left;
+    background-color: black;
+    box-shadow: 6px 6px 9px black;
+    margin-bottom: 120px;
+    transition: all 1.3s;
+}
+.thumbnails:hover{
+    transform: scale(1.1);
+}
+.thumbnails > img{
+    width: 100%;
+
+}
+.thumbnais > div{
+    background-color: black;
+}
+.thumbnails > div > h2{
+    color: white;
+    font-family: 'Signika', sans-serif;
+}
