@@ -28,25 +28,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
 
 
-    <!----------------------------------------------------------------------------->
-    <!-- Latest compiled and minified CSS -->
-    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
-
-    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
-    <!--<link rel="stylesheet" href="css/bootstrap-theme.css">-->
-
-    <!--<script src="js/jquery-2.1.4.js"></script>-->
-    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
-    <!--<script src="js/bootstrap.js"></script>-->
-
-    <!--<link rel="stylesheet" href="css/font-awesome.css">-->
-    <!--<link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,vietnamese' rel='stylesheet' type='text/css'>-->
-    <!--<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>-->
-
-    <!--<script src="data/products.js"></script>-->
-    <!------------------------------------------------------------------------------>
-
-
     <link rel="stylesheet" href="css/nav-footer.css">
     <script src="js/nav-footer.js"></script>
 
@@ -218,7 +199,49 @@
 <!----------****END NAVBAR*****-------->
 
 
+<div class="container" style="height: 1500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div id="divProducts"></div></div>
+<script>
 
+    var products = [];
+
+    $(document).ready(function(){
+        $.ajax({
+            type: "GET" ,
+            url: "data/products.json" ,
+            dataType: "json" ,
+            success: function(data) {
+                products = data;
+                loadProducts();
+            }
+        });
+    });
+
+    function loadProducts() {
+        var html = "";
+        // vòng lặp: duyệt qua từng phần tử trong mảng products
+        $.each (products, function(index, item) {
+            var s = "";
+            s += "<div class='col-md-3 demo' style='padding: 10px 15px'>";
+            s +=    "<div class='thumbnail'>";
+            s +=        "<a href='details.html?id=" + item.id + "'><img class='img-responsive' style='width: 100%; height: 250px'  src='" + item.imgSrc + "'></a>";
+            s +=        "<div class='caption'>";
+            s +=            "<a href='#'><p class='text-center'><strong>" + item.name + "</strong></p></a>";
+            s +=            "<a href='#'><p class='text-center'><small>" + item.price + "</small></p></a>";
+            s +=        "</div>";
+            s +=    "</div>";
+            s += "</div>";
+            html += s;
+        });
+
+        // Bỏ chuỗi html vào bên trong thẻ divProducts
+        $("#divProducts").html(html);
+    }
+</script>
+
+<div class="container" style="margin-top: 100px; height: 1500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <h1>NEWS</h1>
+</div>
 
 
 
