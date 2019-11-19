@@ -32,7 +32,8 @@ h1 {
 }
 #wrap {
   /* fixed width, centered in viewport */
-  margin-top: 150px;
+  margin-top: 50px;
+  margin-bottom: 200px;
   width: 980px;
   left: -490px;
   margin-left: 50%;
@@ -137,4 +138,7 @@ h1 {
 }
 #credits .author {
   color: white;
+}
+#footer{
+  width: 100%;
 }
