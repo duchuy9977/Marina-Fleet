@@ -1,0 +1,61 @@
+body{
+    background-color: #3d76bf;
+}
+#profile {
+
+    width: 90%;
+    margin: 100px auto;
+
+}
+h1{
+    font-size: 3em;
+    font-style: italic;
+    font-weight: bold ;
+    color: white;
+    font-family: Bodoni;
+    text-align: center;
+    margin: 50px;
+}
+#wrapAvatar {
+    padding: 15px;
+    border-radius: 50%;
+    background-color: #83d0ff;
+
+}
+
+#avatar {
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+#avatar > img {
+    width: 100%;
+    border-radius: 50%;
+    border-style: none;
+}
+
+#avatar > button {
+
+    display: block;
+    background: rgba(0, 0, 0, .54);
+    color: #fff;
+    position: absolute;
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: center;
+    height: 2.3rem;
+    bottom: 0;
+    line-height: 2.3rem;
+    overflow: hidden;
+}
+
+.row {
+    padding: 5px;
+}
+
+#footer {
+    clear: both;
+}

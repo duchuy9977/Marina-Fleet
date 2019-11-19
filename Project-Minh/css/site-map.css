@@ -1,0 +1,93 @@
+body {
+    background-color: #3d76bf;
+}
+
+#body {
+    font-family: Bodoni;
+    clear: both;
+    margin-top: 110px;
+    color: white;
+    font-weight: bold;
+
+}
+#site-map >h3{
+    color:#ffeee7;
+    text-align: center;
+}
+.nb-item {
+    clear: both;
+    width: 80%;
+    margin: auto;
+}
+
+
+.page{
+    display: block;
+    border-right: double 3px #3d3223 ;
+    border-bottom:  dashed 1px #3d3223 ;
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*<!----------****h1,h2,h3,a*****-------->*/
+
+    h1 {
+    text-align: center;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Bodoni;
+
+}
+
+h2 {
+    margin:30px 0;
+    color: #fff714;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+h3 {
+    color: #d1ffbb;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin: 10px auto;
+
+}
+a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+/*<!----------****home-features*****-------->*/
+.hf{
+    height: 70px;
+}
+.hf >h3 >a{
+    color: #d1ffbb;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    margin: 10px auto;
+}
+
+/*<!----------****explore-support*****-------->*/
+
+.explore{height: 200px;}
+.page-detail{
+    height: 40px;
+
+}
+
+.support{
+    height:200px;
+}
+
+#footer {
+    margin-top: 50px;
+    clear: both;
+}

@@ -1,0 +1,224 @@
+body{
+    background-color: #3d76bf;
+}
+#body{
+
+    font-family: Bodoni;
+
+}
+
+.divider {
+    width: 60%;
+    margin: auto;
+}
+
+.divider > img {
+    width: 100%;
+    height: 50px;
+    align-items: center;;
+}
+.tittle{
+    width: 100%;
+    margin: auto;
+}
+.tittle > img {
+    width: 100%;
+    align-items: center;;
+}
+.wbg {
+    background-color: #0f4d77;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+#about {
+    font-family: Bodoni;
+    color: white;
+    margin-top: 100px;
+}
+
+h1 {
+    color: white;
+    font-family: Bodoni;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: Product_Sans;
+    display: block;
+    width: 80%;
+
+    margin: auto;
+    line-height: 35px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+
+    color: white;
+
+}
+
+#location {
+    clear: both;
+
+}
+
+#location > h3 {
+    margin-top: 50px;
+    padding: 25px;
+}
+
+#map {
+    position: relative;
+    /*width: 100%;*/
+    margin: auto;
+    overflow: hidden;
+}
+
+i {
+    color: #555f77;
+
+}
+
+#ourteam {
+
+    clear: both;
+}
+
+.thumbnail1 {
+
+    border: none;
+    color: #555f77;
+        background-color:#0f4d77;
+
+
+}
+.tncontent{
+    opacity: 0.5;
+    border-radius: 5%;
+}
+.thumbnail1:hover> .tncontent{
+    transform: scale(1.2);
+    opacity: 1;
+    transition: 1.4s;
+}
+.tncontent{
+    width: 80%;
+    background-color: #3d76bf;
+    margin: 20px auto;
+    padding: 20px 0;
+}
+.image {
+    width: 50%;
+    margin: auto;
+
+    /*margin-top: 20px;*/
+
+}
+
+.image > img {
+    width: 100%;
+
+}
+
+.name {
+    color: white;
+
+    text-transform: capitalize;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: bold;;
+}
+
+.position {
+    font-style: italic;
+    text-align: center;
+    color: white;;
+
+}
+
+/*contact*/
+#contact{
+    padding-top:20px;
+}
+.contact-form {
+    width: 100%;
+}
+
+.contact-form-title {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    line-height: 1.2;
+    padding-bottom: 30px;
+    font-family: Bodoni;
+    text-align: center;
+
+}
+#form{
+    margin-bottom: 10px;
+}
+/*--------------[ Input ]--------*/
+
+.wrap-input {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 17px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Product_Sans;
+
+    font-size: 15px;
+    color: #1b3815;
+    line-height: 1.2;
+}
+
+input.input {
+    height: 62px;
+    padding: 0 20px 0 23px;
+}
+
+textarea.input {
+    min-height: 200px;
+    padding: 20px;
+}
+
+/*[ Button ]*!*/
+.container-contact-form-btn {
+
+    padding-top: 13px;
+}
+
+.contact-form-btn {
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    height: 42px;
+    background-color: #3d76bf;
+    color: white;
+    font-weight: bold;
+}
+
+#contactinf>div{
+    font-family: Bodoni;
+    color: white;
+    font-size: 24px;
+    font-weight: bold ;
+text-align: center;
+    margin: 20px 0;
+}
+#chat{
+
+}
