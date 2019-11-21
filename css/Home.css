@@ -64,6 +64,7 @@ body {
 /*******************THUMBNAIL*****************/
 #thumbnail{
     margin-top: 50px;
+    box-shadow: none;
 }
 .thumbnail{
     background-color: rgba(83,164,255,0);
@@ -73,7 +74,7 @@ body {
 }
 .thumbnail > div > img {
     width: 95%;
-    padding: 10px 0;
+    padding: 0 0;
 }
 .thumbnail:hover{
     transform: scale(1.1);
@@ -85,50 +86,6 @@ body {
 
 
 
-
-
-
-/****************FOOTER***************/
-/*#footer{*/
-    /*margin:auto;*/
-    /*position: relative;*/
-    /*top: 0;*/
-    /*color: #f1f1f1;*/
-    /*width: 100%;*/
-    /*margin-bottom: 300px;*/
-/*}*/
-/*#footerleft{*/
-    /*color:white;*/
-    /*width: 40%;*/
-    /*margin-left: 200px;*/
-    /*float: left;*/
-
-/*}*/
-/*#footerleft > h2{*/
-    /*margin-bottom: 30px;*/
-/*}*/
-/*footer > #footerleft > div{*/
-    /*margin-top: 10px;*/
-    /*font-size: 1.5em;*/
-/*}*/
-/*footer > #footerleft > div > i{*/
-    /*transform: scale(1.5)*/
-/*}*/
-/*#footerright{*/
-    /*width: 40%;*/
-    /*float: left;*/
-/*}*/
-/*#footerright > a > i{*/
-    /*color: white;*/
-    /*font-size: 3em;*/
-    /*padding: 20px;*/
-    /*margin-top: 50px;*/
-    /*transition: all 1.3s;*/
-/*}*/
-/*#footerright > a > i:hover{*/
-    /*transform: rotate(360deg);*/
-/*}*/
-/****************END FOOTER***************/
 
 
 @media only screen and (max-width: 768px) {

@@ -8,7 +8,7 @@ products.push(
         id: 1,
         imgSrc: 'data/2.png',
         name: 'NOKIA 1100',
-        price: '12'
+        price: 'Florida is undoubtedly the home of “boatgating” – the art of tailgating on a boat! Also known...'
     }
 );
 products.push({id: 2, imgSrc: 'data/2.png', name: 'Nokia', price: '13'});
