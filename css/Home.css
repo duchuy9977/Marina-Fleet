@@ -1,7 +1,7 @@
 
 
 /**************background***************/
-* {
+{
     box-sizing: border-box;
 }
 
@@ -64,19 +64,20 @@ body {
 /*******************THUMBNAIL*****************/
 #thumbnail{
     margin-top: 50px;
-    box-shadow: none;
+    box-shadow: black;
 }
-.thumbnail{
+.thumbnails{
     background-color: rgba(83,164,255,0);
     border: none;
     transition: all 1.3s;
     filter: grayscale(100%);
+    margin: 10px 0;
 }
-.thumbnail > div > img {
+.thumbnails > div > img {
     width: 95%;
     padding: 0 0;
 }
-.thumbnail:hover{
+.thumbnails:hover{
     transform: scale(1.1);
     filter: grayscale(0%);
 }
@@ -89,7 +90,13 @@ body {
 
 
 @media only screen and (max-width: 768px) {
-
+    #content{
+        padding: 10px;
+    }
+    #sologan{
+        padding: 180px 10px;
+        font-size: 2em;
+    }
 }
 
 
