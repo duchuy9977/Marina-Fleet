@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Marine Fleet</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Site map</title>
-
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,36 +13,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <!--<link href="reset.css" rel="stylesheet" type="text/css">-->
-    <!--<link href="style.css" rel="stylesheet" type="text/css">-->
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="hover.js"></script>
     <link rel="stylesheet" href="fontawesome-free-5.10.2-web/css/all.min.css">
 
-
-    <!--Navbar and header-->
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Slabo+27px&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Crete+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
 
+
     <link rel="stylesheet" href="css/nav-footer.css">
     <script src="js/nav-footer.js"></script>
-    <!--Navbar and header-->
 
-    <!--body-->
+    <link href="https://fonts.googleapis.com/css?family=Calistoga&display=swap" rel="stylesheet">
 
-    <!--body-->
+    <link rel="stylesheet" href="css/NewsFeatures.css">
+    <script src="js/News.js"></script>
+    <link rel="stylesheet" href="css/main.css">
 
-    <link rel="stylesheet" href="css/site-map.css">
 </head>
-
 <body>
-
-
+<!-----------NAVBAR---------------->
 <div class="navbar navbar-default navbar-static-top">
     <div class="container" id="navigation">
         <div class="navbar-header">
@@ -166,152 +163,151 @@
 
 <!----------****END NAVBAR*****-------->
 
-<!----------****body*****-------->
 
-<div id="body">
-    <div id="site-map">
-        <h1>Site map</h1>
-        <h3>Easier to get to page you want</h3>
+<h1 id="sologan">Which kind of you want?</h1>
+
+<div id="wrap">
+    <div id="showcase" class="noselect">
+        <a href="Luxury.html">
+            <img class="cloud9-item" src="chrome.png" alt="Chrome"  style="width: 350px; padding-top: 150px">
+        </a>
+        <a href="Sailing.html">
+            <img class="cloud9-item" src="firefox.png" alt="Firefox" style="width: 350px; margin-top: -100px">
+        </a>
+        <a href="Sport.html">
+            <img class="cloud9-item" src="wyzo.png" alt="Wyzo"  style="width: 350px; padding-top: 100px">
+        </a>
+        <a href="Fishing.html">
+            <img class="cloud9-item" src="opera.png" alt="Opera"  style="width: 350px; padding-top: 100px">
+        </a>
+        <!--<img class="cloud9-item" src="iexplore.png" alt="Internet Explorer"  style="width: 350px; padding-top: 200px">-->
+        <!--<img class="cloud9-item" src="safari.png" alt="Safari"  style="width: 350px"></div>-->
+        <p id="item-title">&nbsp;</p>
+        <!--<div class="nav" class="noselect">-->
+        <!--<button class="left"> ←</button>-->
+        <!--<button class="right"> →</button>-->
+        <!--</div>-->
     </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="jquery.reflection.js"></script>
+    <script src="jquery.cloud9carousel.js"></script>
+    <script>
+        $(function () {
+            var showcase = $("#showcase")
 
-    <!----------****home*****-------->
+            showcase.Cloud9Carousel({
+                yPos: 42,
+                yRadius: 48,
+                mirrorOptions: {
+                    gap: 12,
+                    height: 0.2
+                },
+                buttonLeft: $(".nav > .left"),
+                buttonRight: $(".nav > .right"),
+                autoPlay: true,
+                bringToFront: true,
+                onRendered: showcaseUpdated,
+                onLoaded: function () {
+                    showcase.css('visibility', 'visible')
+                    showcase.css('display', 'none')
+                    showcase.fadeIn(1500)
+                }
+            })
 
-    <div class="nb-item ">
-        <h2>Home page</h2>
-        <div class="page hf col-xs-6 col-md-3">
-            <h3><a href="Home.html" >Home</a>
-            </h3>
-        </div>
-    </div>
-    <!----------****features*****-------->
+            function showcaseUpdated(showcase) {
+                var title = $('#item-title').html(
+                    $(showcase.nearestItem()).attr('alt')
+                )
 
-    <div class="nb-item">
-        <h2>Features</h2>
-        <div class="page hf col-xs-6 col-md-3" id="feature">
-            <h3><a href="Luxury.html">Luxury</a></h3>
-        </div>
-        <div class="page hf col-xs-6 col-md-3">
-            <h3><a href="Sailing.html">Sailing</a></h3>
-        </div>
-        <div class="page hf col-xs-6 col-md-3">
-            <h3><a href="Fishing.html">Fishing</a></h3>
-        </div>
-        <div class="page hf col-xs-6 col-md-3">
-            <h3><a href="Sport.html">Sport</a></h3>
-        </div>
-    </div>
-    <!----------****explore*****-------->
+                var c = Math.cos((showcase.floatIndex() % 1) * 2 * Math.PI)
+                title.css('opacity', 0.5 + (0.5 * c))
+            }
 
-    <div class="nb-item">
-        <h2>Explore</h2>
-        <div class="page explore col-xs-6 col-md-3">
-            <h3>News</h3>
-            <div class="page-detail"><a href="News.html">Advise</a></div>
-            <div class="page-detail"><a href="News.html">review</a></div>
-            <div class="page-detail"><a href="News.html">funfact</a></div>
-        </div>
-        <div class="page explore col-xs-6 col-md-3">
-            <h3>Events</h3>
-            <div class="page-detail"><a href="Events.html">festival</a></div>
+            // Simulate physical button click effect
+            $('.nav > button').click(function (e) {
+                var b = $(e.target).addClass('down')
+                setTimeout(function () {
+                    b.removeClass('down')
+                }, 80)
+            })
 
-        </div>
-        <div class="page explore col-xs-6 col-md-3">
-            <h3>Gallery</h3>
-            <div class="page-detail"><a href="Gallery.html">albums</a></div>
-            <div class="page-detail"><a href="Gallery.html">videos</a></div>
+            $(document).keydown(function (e) {
+                //
+                // More codes: http://www.javascripter.net/faq/keycodes.htm
+                //
+                switch (e.keyCode) {
+                        /* left arrow */
+                    case 37:
+                        $('.nav > .left').click()
+                        break
 
-        </div>
-        <div class="page explore col-xs-6 col-md-3">
-            <h3>Service</h3>
-            <div class="page-detail"><a href="#">buying</a></div>
-            <div class="page-detail"><a href="#">boating</a></div>
-            <div class="page-detail"><a href="#">show room</a></div>
-            <div class="page-detail"><a href="#">compare</a></div>
+                        /* right arrow */
+                    case 39:
+                        $('.nav > .right').click()
+                }
+            })
+        })
+    </script>
+    <script type="text/javascript">
 
-        </div>
-    </div>
-    <!----------****support*****-------->
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
 
-    <div class="nb-item">
-        <h2>Support</h2>
-        <div class="page support col-xs-6 col-md-3">
-            <h3>Customer</h3>
-            <div class="page-detail"><a href="customer-sign.html">register</a></div>
-            <div class="page-detail"><a href="customer-profile.html">my profile</a></div>
-            <div class="page-detail"><a href="customer-boats.html">my boats</a></div>
-            <div class="page-detail"><a href="#">log out</a></div>
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
 
-        </div>
-        <div class="page support col-xs-6 col-md-3">
-            <h3>About</h3>
-            <div class="page-detail"><a href="about.html">about us</a></div>
+    </script>
 
-            <div class="page-detail"><a href="site-map.html">site map</a></div>
+    <h1 id="sologan2" style="">Luxury</h1>
 
-        </div>
-    </div>
-</div>
-<!----------****body*****-------->
+<div id="product" class="container" style="margin-top: 100px; height: 1500px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div id="divProducts"></div></div>
+<script>
+    var products = [];
+
+    $(document).ready(function(){
+        $.ajax({
+            type: "GET" ,
+            url: "data/productsLuxury.json" ,
+            dataType: "json" ,
+            success: function(data) {
+                products = data;
+                loadProducts();
+            }
+        });
+    });
+
+    function loadProducts() {
+        var html = "";
+        // vòng lặp: duyệt qua từng phần tử trong mảng products
+        $.each (products, function(index, item) {
+            var s = "";
+            s += "<div class='col-md-3 demo' style='padding: 10px 15px'>";
+            s +=    "<div class='thumbnail'>";
+            s +=        "<a href='details.html?id=" + item.id + "'><img class='img-responsive' style='width: 100%; height: 250px'  src='" + item.imgSrc + "'></a>";
+            s +=        "<div class='caption'>";
+            s +=            "<a href='#'><p class='text-center'><strong>" + item.name + "</strong></p></a>";
+            s +=            "<a href='#'><p class='text-center'><small>" + item.price + "</small></p></a>";
+            s +=        "</div>";
+            s +=    "</div>";
+            s += "</div>";
+            html += s;
+        });
+
+        // Bỏ chuỗi html vào bên trong thẻ divProducts
+        $("#divProducts").html(html);
+    }
+</script>
 
 
-<!--FOOTER-->
-<div id="footer">
-    <div class="container-fluid">
-        <div class="col-sm-4 col-md-5">
-            <div>
-                <img src="images/logo2.png" alt="">
-                <p>We’re committed to providing the best customer service possible. We always enjoy hearing from our
-                    clients. Your opinion means so much to us, and gives us insight as to how we can continue
-                    improving our services. If you could take a moment to send us your feedback we would really
-                    appreciate it. We look forward to hearing from you!</p>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-3">
-            x
-            <div class="address"><i class="fas fa-map-marker-alt"></i><span style="color:rgba(0,0,0,0)">oi</span>38
-                Yên Bái, Đà Nẵng
-            </div>
-            <div class="address"><i class="fas fa-phone-alt"></i><span style="color:rgba(0,0,0,0)">ii</span>Phone:
-                0510.123.4567
-            </div>
-            <div class="address"><i class="fas fa-envelope"></i><span style="color:rgba(0,0,0,0)">ii</span>MarineFleet@gmail.com
-            </div>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="col-sm-4 col-md-4">
-            <h2>FOLLOW US</h2>
-            <hr>
-            <div id="fanpage">
-                <img id="fanpageBackground" src="images/Home/yacht-3480913_1920.jpg" alt=""
-                     style="position: absolute">
-                <img src="images/Home/flat,1000x1000,075,f.jpg" alt=""
-                     style="width: 25%; position: absolute; top: 10px; left: 10px">
-                <div style="position: absolute; top: 10px; left: 130px; color: white; font-size: 2em">Marina Fleet
-                </div>
-                <div style="position: absolute; top: 50px; left: 130px; color: white; font-size: 1.5em">1.135.348
-                    likes
-                </div>
-                <div style="position: absolute; top: 50px; left: 130px; color: white; font-size: 1.5em">1.135.348
-                    likes
-                </div>
-                <button style="position: absolute; top: 240px; left: 20px; color: black; font-size: 1.2em"><i
-                        class="fab fa-facebook-square" style="color: #0f4d77"></i> Thích Trang
-                </button>
-                <button style="position: absolute; top: 240px; left: 320px; color: black; font-size: 1.2em"><i
-                        class="fas fa-share"></i> Share
-                </button>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid" style="border-top: 1px solid white; color: white; padding: 20px 50px">
-        <i class="far fa-copyright"></i> COPYRIGHT MARINA FLEET 2019. DESIGN AND DEVELOPMENT BY SOFTECH APTECH
-    </div>
-</div>
-<!--END FOOTER-->
 
 </body>
 </html>
